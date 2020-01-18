@@ -24,6 +24,7 @@ RUN apk --no-cache update && apk --no-cache upgrade && apk --no-cache --update -
    tar xf jumanpp-$JUMANPP_VERSION.tar.xz && \
    cd jumanpp-$JUMANPP_VERSION && \
    mkdir build && \
+   cd build && \
    cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local  && \
    make install -j  && \
    rm -rf  /tmp/src
